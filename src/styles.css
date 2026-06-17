@@ -93,6 +93,11 @@ position:absolute;
   }
 }
 
+/* Merged animations */
+.custom-st,
+.custom-nkmm > img {
+  animation: 2s cubic-bezier(.175, .885, .32, 1.275) infinite alternate;
+}
 
 
 /* Overall page setup and resets */
@@ -132,7 +137,7 @@ a {
   */
 
   image-rendering: pixelated;
-  animation: 2s cubic-bezier(.175, .885, .32, 1.275) infinite alternate jumping;
+  animation-name: jumping;
 }
 
 @keyframes jumping {
@@ -894,6 +899,24 @@ s {
   gap: 4em;
   justify-content: center;
   margin-bottom: -.85em;
+
+  & > img {
+    transform-origin: 50% 100%;
+    animation-name: flatten;
+
+    &:last-child {
+      scale: -1 1;
+    }
+  }
+}
+@keyframes flatten {
+  0%,
+  20% {
+    transform: rotateX(0) skewX(0);
+  }
+  10% {
+    transform: rotateX(60deg) skewX(30deg);
+  }
 }
 
 .user_game_grid::before {
@@ -943,7 +966,6 @@ s {
   scrollbar-color: var(--primary) var(--background) !important;
 
   /* Fade out collection list */
-  mask: var(--mask-gradient);
   mask: alpha var(--mask-gradient);
 }
 
