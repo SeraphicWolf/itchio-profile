@@ -213,7 +213,7 @@ a {
 
     display: inline-flex;
     contain: paint;
-    content: url("https://cdn.jsdelivr.net/gh/nndda/itchio-profile@main/assets/profile.webp");
+    content: url("https://img.itch.zone/aW1nLzYzMzE1NTAucG5n/100x100%23/Gnx32w.png");
     border-radius: 9px;
     box-shadow: 0 0 8px var(--shadow);
   }
